@@ -26,7 +26,7 @@ a/b?   ''')
     print()
 
     # Spielereingabe und Anfangswerte (für alle Spielmodi).
-    player_num = input('Spielerzahl: ')
+    player_num = int(input('Spielerzahl: '))
     player = []
     score = []
     for i in range(player_num):
