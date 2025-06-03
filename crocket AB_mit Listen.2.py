@@ -26,48 +26,20 @@ a/b?   ''')
     print()
 
     # Spielereingabe und Anfangswerte (für alle Spielmodi).
-    name_1 = input('Spieler 1:   ')
-    number_1 = 1
-    score_1 = 0
-    strokes_1 = 0
-    player_1 = [score_1, strokes_1, number_1, name_1]
-
-    name_2 = input('Spieler 2:   ')
-    number_2 = 2
-    score_2 = 0
-    strokes_2 = 0
-    player_2 = [score_2, strokes_2, number_2, name_2]
-
-    player = [player_1, player_2]
-    score = [score_1, score_2]
-
-    # Weitere Anfangswerte für Modus A
+    player_num = input('Spielerzahl: ')
+    player = []
+    score = []
+    for i in range(player_num):
+        name = input(f'Spieler {i+1}: ')
+        number = i+1
+        score_i = 0
+        strokes = 0
+        player_i = [score, strokes, number, name]
+        player.append(player_i)
+        score.append(score_i)
+  
     score_assigned = 0
-    # falls nur 2 Spieler trotzdem nötig:
-    score_3 = 0
-    score_4 = 0
-
-    more = input('Mehr Spieler? j/n   ')
-    if more == 'j':
-        name_3 = input('Spieler 3:   ')
-        number_3 = 3
-        score_3 = 0
-        strokes_3 = 0
-        player_3 = [score_3, strokes_3, number_3, name_3]
-
-        score.append(score_3)
-        player.append(player_3)
-
-        more = input('Mehr Spieler? j/n   ')
-        if more == 'j':
-            name_4 = input('Spieler 4:   ')
-            number_4 = 3
-            score_4 = 0
-            strokes_4 = 0
-            player_4 = [score_4, strokes_4, number_4, name_4]
-
-            score.append(score_4)
-            player.append(player_4)
+    
     print()
 
     # Rundenzahl
